@@ -4,17 +4,17 @@
 [![dependencies Status](https://img.shields.io/circleci/build/github/ekv88/react-boilerplate/master.svg)](https://circleci.com/gh/ekv88/react-boilerplate)
 [![dependencies Status](https://david-dm.org/ekv88/react-boilerplate/master/status.svg)](https://david-dm.org/ekv88/react-boilerplate/master)
 [![devDependencies Status](https://david-dm.org/ekv88/react-boilerplate/master/dev-status.svg)](https://david-dm.org/ekv88/react-boilerplate/master?type=dev)
----
+
 ### Let's get started 🚀
 *If you are new to ReactJS and SPA world, all you need to do is to clone repo, navigate to folder and install dependencies using npm or yarn:*
 #### Using npm
-```bash
+```shell script
 git clone https://github.com/ekv88/react-boilerplate.git
 cd react-boilerplate
 npm install
 ```
 #### Using yarn
-```bash
+```shell script
 git clone https://github.com/ekv88/react-boilerplate.git
 cd react-boilerplate
 yarn install
