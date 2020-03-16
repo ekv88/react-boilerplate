@@ -1,3 +1,6 @@
+
+# ⚠ THIS IS WORK IN PROGRESS, DONT USE IT YET! ⚠
+
 # ReactJS Boilerplate ⚛ 
 *This is boilerplate code made to support scalability and everything you would need in SPA*
 
@@ -19,8 +22,10 @@ git clone https://github.com/ekv88/react-boilerplate.git
 cd react-boilerplate
 yarn install
 ```
+
 ---
-### Avaiable scripts ⚡
+
+### Available scripts ⚡
 *There are few available scripts that u can use, this boilerplate dose not support test yet, but there's plan for that as well, or feel free to create pull request*
 
 **Using npm**
@@ -32,7 +37,51 @@ yarn install
 * `yarn start` - Starts development server
 * `yran run build` - Builds production version of 
 * `yarn run styleguide` - Start styleguidist
---- 
+
+---
+
+### Project tree 🌳
+*If you are wondering about folder structure, here is brief intro to every file and what is used for*
+ * [public](./public) - *Assets folder*
+   * [index.html](./public/index.html) - *App entry server-side rendered point*
+ * [src](./src) - *everything related to app is here*
+   * [components](./src/components) - *Custom components in app*
+     * [CommonComponent](./src/components/CommonComponent) - *Example component*
+     * [Layout](./src/components/Layout) - *Layout layer component*
+     * [index.js](./src/components/index.js) - *Export all components here*
+   * [pages](./src/pages) - *Application pages*
+     * [AboutPage](./src/pages/AboutPage) *About us page*
+     * [HomePage](./src/pages/HomePage) - *Home a.k.a. index page*
+     * [UtilPages](./src/pages/UtilPages) - *Error and common pages*
+     * [index.js](./src/pages/index.js) - *Export all pages here*
+   * [redux](./src/redux)
+     * [redux](./src/redux/doggos) - *Example of redux*
+     * [api.js](./src/redux/api.js) - *All api points go here*
+     * [history.js](./src/redux/history.js) - *History configuration*
+     * [reducerInjector.js](./src/redux/reducerInjector.js) - *All api points go here*
+     * [index.js](./src/redux/index.js) - **Import redux here! (Don't forget to!)**
+   * [util](./src/util)
+     * [Container.js](./src/util/Container.js) - *todo*
+     * [Action.js](./src/util/Action.js) - *todo*
+     * [Redux.js](./src/util/Redux.js) - *todo*
+     * [Type.js](./src/util/Type.js) - *todo*
+     * [http.js](./src/util/http.js) - *todo*
+     * [util.js](./src/util/util.js) - *todo*
+   * [store.js](./src/store.js) - *todo*
+   * [configureStore.js](./src/configureStore.js) - *todo*
+   * [Root.js](./src/Root.js) - *todo*
+   * [setupProxy.js](./src/setupProxy.js) - *todo*
+   * [index.js](./src/index.js) - *todo*
+   
+   
+---
+
+### Redux 🔄
+
+**Todo this one**
+
+---
+
 ### Dependencies 📦
 | Name                  |Version    | What for?    |
 |-----------------------|-----------| -------------|
@@ -50,7 +99,9 @@ yarn install
 |redux-thunk            |version    |TODO          |
 |reselect               |version    |TODO          |
 
+
 --- 
+
 ### Dev. Dependencies 📦
 | Name                    | Version   | What for?    |
 |-------------------------|-----------| -------------|
@@ -58,3 +109,9 @@ yarn install
 |node-sass                |version    |TODO          |
 |redux-devtools-extension |version    |TODO          |
 |react-styleguidist       |version    |TODO          |
+
+---
+
+### License
+
+ReactJS Boilerplate is [MIT licensed](./LICENSE).
