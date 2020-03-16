@@ -32,11 +32,13 @@ yarn install
 * `npm start` - Starts development server
 * `npm run build` - Builds production version of 
 * `npm run styleguide` - Start styleguidist
+* `npm run styleguide:build` - Build styleguidist components preview
 
 **Using yarn**
 * `yarn start` - Starts development server
 * `yran run build` - Builds production version of 
 * `yarn run styleguide` - Start styleguidist
+* `yarn run styleguide:build` - Build styleguidist components preview
 
 ---
 
@@ -44,13 +46,13 @@ yarn install
 *If you are wondering about folder structure, here is brief intro to every file and what is used for*
  * [public](./public) - *Assets folder*
    * [index.html](./public/index.html) - *App entry server-side rendered point*
- * [src](./src) - *everything related to app is here*
+ * [src](./src) - *Everything related to app is here*
    * [components](./src/components) - *Custom components in app*
      * [CommonComponent](./src/components/CommonComponent) - *Example component*
      * [Layout](./src/components/Layout) - *Layout layer component*
      * [index.js](./src/components/index.js) - *Export all components here*
    * [pages](./src/pages) - *Application pages*
-     * [AboutPage](./src/pages/AboutPage) *About us page*
+     * [AboutPage](./src/pages/AboutPage) - *About us page*
      * [HomePage](./src/pages/HomePage) - *Home a.k.a. index page*
      * [UtilPages](./src/pages/UtilPages) - *Error and common pages*
      * [index.js](./src/pages/index.js) - *Export all pages here*
@@ -61,17 +63,17 @@ yarn install
      * [reducerInjector.js](./src/redux/reducerInjector.js) - *All api points go here*
      * [index.js](./src/redux/index.js) - **Import redux here! (Don't forget to!)**
    * [util](./src/util)
-     * [Container.js](./src/util/Container.js) - *todo*
-     * [Action.js](./src/util/Action.js) - *todo*
-     * [Redux.js](./src/util/Redux.js) - *todo*
-     * [Type.js](./src/util/Type.js) - *todo*
-     * [http.js](./src/util/http.js) - *todo*
-     * [util.js](./src/util/util.js) - *todo*
-   * [store.js](./src/store.js) - *todo*
-   * [configureStore.js](./src/configureStore.js) - *todo*
-   * [Root.js](./src/Root.js) - *todo*
-   * [setupProxy.js](./src/setupProxy.js) - *todo*
-   * [index.js](./src/index.js) - *todo*
+     * [Container.js](./src/util/Container.js) - *Append api in redux actions*
+     * [Action.js](./src/util/Action.js) - *Util methods related to redux actions*
+     * [Redux.js](./src/util/Redux.js) - *Util methods related to redux*
+     * [Type.js](./src/util/Type.js) - *Util methods related to redux types*
+     * [http.js](./src/util/http.js) - *Utils related to http methods*
+     * [util.js](./src/util/util.js) - *Util methods*
+   * [store.js](./src/store.js) - *Exporting redux store*
+   * [configureStore.js](./src/configureStore.js) - *Redux store configuration*
+   * [Root.js](./src/Root.js) - *App Routes*
+   * [setupProxy.js](./src/setupProxy.js) - *App development proxy*
+   * [index.js](./src/index.js) - *App entry point*
    
    
 ---
