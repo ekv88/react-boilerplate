@@ -1,6 +1,5 @@
-
-# ⚠ THIS IS WORK IN PROGRESS, DONT USE IT YET! ⚠
-
+⚠ THIS IS WORK IN PROGRESS: You can use it but it's not done yet! ⚠
+---
 # ReactJS Boilerplate ⚛ 
 *This is boilerplate code made to support scalability and everything you would need in SPA*
 
@@ -22,9 +21,7 @@ git clone https://github.com/ekv88/react-boilerplate.git
 cd react-boilerplate
 yarn install
 ```
-
----
-
+----
 ### Available scripts ⚡
 *There are few available scripts that u can use, this boilerplate dose not support test yet, but there's plan for that as well, or feel free to create pull request*
 
@@ -50,10 +47,11 @@ yarn install
    * [components](./src/components) - *Custom components in app*
      * [CommonComponent](./src/components/CommonComponent) - *Example component*
      * [Layout](./src/components/Layout) - *Layout layer component*
+     * [SideMenu](./src/components/SideMenu) - *Side menu component*
      * [index.js](./src/components/index.js) - *Export all components here*
    * [pages](./src/pages) - *Application pages*
      * [AboutPage](./src/pages/AboutPage) - *About us page*
-     * [HomePage](./src/pages/HomePage) - *Home a.k.a. index page*
+     * [AboutPage](./src/pages/AboutPage) - *Home a.k.a. index page*
      * [UtilPages](./src/pages/UtilPages) - *Error and common pages*
      * [index.js](./src/pages/index.js) - *Export all pages here*
    * [redux](./src/redux)

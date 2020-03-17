@@ -1,0 +1,16 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  > body {
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#main-container {
+
+}
