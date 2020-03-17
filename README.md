@@ -1,5 +1,9 @@
-⚠ THIS IS WORK IN PROGRESS: You can use it but it's not done yet! ⚠
+----
+
+#### `⚠ Some things are still work in progress!  ⚠`
+
 ---
+
 # ReactJS Boilerplate ⚛ 
 *This is boilerplate code made to support scalability and everything you would need in SPA*
 
@@ -55,7 +59,7 @@ yarn install
      * [UtilPages](./src/pages/UtilPages) - *Error and common pages*
      * [index.js](./src/pages/index.js) - *Export all pages here*
    * [redux](./src/redux)
-     * [redux](./src/redux/doggos) - *Example of redux*
+     * [doggos](./src/redux/doggos) - *Example of redux*
      * [api.js](./src/redux/api.js) - *All api points go here*
      * [history.js](./src/redux/history.js) - *History configuration*
      * [reducerInjector.js](./src/redux/reducerInjector.js) - *All api points go here*

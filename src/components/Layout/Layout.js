@@ -1,4 +1,5 @@
-import React, { Fragment, Suspense } from 'react';
+import React, { Suspense } from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
@@ -50,28 +51,35 @@ const Layout = ({menu, main, id}) => {
     const classes = useStyles();
 
     return (
-        <Fragment>
-            <Grid container direction="row" spacing={0} className={classes.container}>
-                <Grid item xl={2} lg={2} md={4} sm={12} xs={12}>
-                    <div className={classes.root}>
-                        <AppBar position="absolute" className={classes.appBar}>
-                            <Toolbar className={classes.toolbar}>
-                                <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-                                    Dashboard
-                                </Typography>
-                            </Toolbar>
-                        </AppBar>
-                        <Drawer variant="permanent" classes={{ paper: classes.drawerPaper}} open>{menu}</Drawer>
-                    </div>
-                </Grid>
-                <Grid item xl={10} lg={10} md={8} sm={12} xs={12} className={classes.contentContainer}>
-                    <div className="content-holder" id={id}>
-                        <Suspense fallback={null}>{main}</Suspense>
-                    </div>
-                </Grid>
+        <Grid container direction="row" spacing={0} className={classes.container}>
+            <Grid item xl={2} lg={2} md={4} sm={12} xs={12}>
+                <div className={classes.root}>
+                    <AppBar position="absolute" className={classes.appBar}>
+                        <Toolbar className={classes.toolbar}>
+                            <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
+                                Dashboard
+                            </Typography>
+                        </Toolbar>
+                    </AppBar>
+                    <Drawer variant="permanent" classes={{ paper: classes.drawerPaper}} open>{menu}</Drawer>
+                </div>
             </Grid>
-        </Fragment>
+            <Grid item xl={10} lg={10} md={8} sm={12} xs={12} className={classes.contentContainer}>
+                <div className="content-holder" id={id}>
+                    <Suspense fallback={null}>{main}</Suspense>
+                </div>
+            </Grid>
+        </Grid>
     );
-}
+};
+
+Layout.propTypes = {
+    // Main element to render
+    main: PropTypes.any,
+    // Menu element to render on left side
+    menu: PropTypes.any,
+    // Id of page
+    id: PropTypes.string,
+};
 
 export default Layout;

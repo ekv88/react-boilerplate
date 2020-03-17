@@ -10,6 +10,7 @@
     "axios": "^0.19.2",
     "connected-react-router": "^6.8.0",
     "history": "^4.10.1",
+    "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-redux": "^7.2.0",
@@ -23,8 +24,8 @@
   "devDependencies": {
     "http-proxy-middleware": "^1.0.2",
     "node-sass": "^4.13.1",
-    "redux-devtools-extension": "^2.13.8",
-    "react-styleguidist": "^11.0.1"
+    "react-styleguidist": "^11.0.1",
+    "redux-devtools-extension": "^2.13.8"
   },
   "scripts": {
     "start": "react-scripts start",
