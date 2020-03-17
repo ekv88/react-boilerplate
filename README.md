@@ -51,7 +51,7 @@ yarn install
      * [index.js](./src/components/index.js) - *Export all components here*
    * [pages](./src/pages) - *Application pages*
      * [AboutPage](./src/pages/AboutPage) - *About us page*
-     * [AboutPage](./src/pages/AboutPage) - *Home a.k.a. index page*
+     * [HomePage](./src/pages/HomePage) - *Home a.k.a. index page*
      * [UtilPages](./src/pages/UtilPages) - *Error and common pages*
      * [index.js](./src/pages/index.js) - *Export all pages here*
    * [redux](./src/redux)
@@ -84,31 +84,31 @@ yarn install
 
 ### Dependencies 📦
 | Name                  |Version    | What for?    |
-|-----------------------|-----------| -------------|
-|@material-ui/core      |version    |TODO          |
-|@material-ui/icons     |version    |TODO          |
-|connected-react-router |version    |TODO          |
-|history                |version    |TODO          |
-|react                  |version    |TODO          |
-|react-dom              |version    |TODO          |
-|react-redux            |version    |TODO          |
-|react-router           |version    |TODO          |
-|react-router-dom       |version    |TODO          |
-|react-scripts          |version    |TODO          |
-|redux                  |version    |TODO          |
-|redux-thunk            |version    |TODO          |
-|reselect               |version    |TODO          |
-
+|-----------------------|-----------|--------------|
+|@material-ui/core      |4.9.5      |TODO          |
+|@material-ui/icons     |4.9.1      |TODO          |
+|axios                  |0.19.2     |TODO          |
+|connected-react-router |6.8.0      |TODO          |
+|history                |4.10.1     |TODO          |
+|react                  |16.13.0    |TODO          |
+|react-dom              |16.13.0    |TODO          |
+|react-redux            |7.2.0      |TODO          |
+|react-router           |5.1.2      |TODO          |
+|react-router-dom       |5.1.2      |TODO          |
+|react-scripts          |3.4.0      |TODO          |
+|redux                  |4.0.5      |TODO          |
+|redux-thunk            |2.3.0      |TODO          |
+|reselect               |4.0.0      |TODO          |
 
 --- 
 
 ### Dev. Dependencies 📦
 | Name                    | Version   | What for?    |
-|-------------------------|-----------| -------------|
-|http-proxy-middleware    |version    |TODO          |
-|node-sass                |version    |TODO          |
-|redux-devtools-extension |version    |TODO          |
-|react-styleguidist       |version    |TODO          |
+|-------------------------|-----------|--------------|
+|http-proxy-middleware    |1.0.2      |TODO          |
+|node-sass                |4.13.1     |TODO          |
+|redux-devtools-extension |2.13.8     |TODO          |
+|react-styleguidist       |11.0.1     |TODO          |
 
 ---
 
