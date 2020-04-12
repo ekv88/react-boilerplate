@@ -34,12 +34,14 @@ yarn install
 * `npm run build` - Builds production version of 
 * `npm run styleguide` - Start styleguidist
 * `npm run styleguide:build` - Build styleguidist components preview
+* `npm run generator` - [Code generator](#code-generator-) wizard
 
 **Using yarn**
 * `yarn start` - Starts development server
 * `yran run build` - Builds production version of 
 * `yarn run styleguide` - Start styleguidist
 * `yarn run styleguide:build` - Build styleguidist components preview
+* `yarn run generator` - [Code generator](#code-generator-) wizard
 
 ---
 
@@ -86,10 +88,10 @@ yarn install
 ### Code generator 🏗
 **Smart man once said:** *"If you don't overkill every project with automation, are you even a 21st century developer?"*
 
-We are here in the world where the writing code is considered obsolete, and it's wonderfull, with a little help of [Plop.JS](https://plopjs.com/) I've created automated wizard for common components, redux and HoC with possibility to generate styleguide examples as well
+Typing code is considered obsolete today, and it's wonderful, with a little help of [Plop.JS](https://plopjs.com/) I've created automated wizard for common components, redux and HoC with possibility to generate styleguide examples as well
 
 **What can be generated?**
-* Common components - With or without `useState`, `useEffect`, `PropTypes @TODO`
+* Common components - With or without `useState`, `useEffect`, `PropTypes`
 * Higher-Order Component example
 * Redux `Action`, `Selector`, `Reducer` bundle
 * *You can also choose if you want to export example for styleguide*
