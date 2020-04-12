@@ -29,22 +29,13 @@ const HANDLERS = {
     [TYPES.GET_DOGGOS_IMAGES]: startLoadingAndRemoveErrorForApiAction,
     [TYPES.GET_DOGGOS_IMAGES_FAIL]: stopLoadingAndStoreErrorForApiAction,
     [TYPES.GET_DOGGOS_IMAGES_SUCCESS]: combineReducers({
-        movies: (state = [], action) =>
+        images: (state = [], action) =>
             !action || !action.payload || !action.payload.results ? [] : action.payload.results,
-        pagination: (state = [], action) =>
-            !action || !action.payload || !action.payload.results ? { page: 0, total_pages: 0 } : { page: action.payload.page, total_pages: action.payload.total_pages },
-        genres: doNothing,
-        favorites: doNothing,
-        watchList: doNothing,
         loading: byApiAction(store(false)),
         errors: doNothing,
     }),
     [TYPES.RESET_ERROR]: combineReducers({
-        movies: doNothing,
-        genres: doNothing,
-        pagination: doNothing,
-        favorites: doNothing,
-        watchList: doNothing,
+        images: doNothing,
         loading: byApiAction(store(false)),
         errors: (state = [], action) => null
     })

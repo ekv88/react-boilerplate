@@ -45,6 +45,10 @@ yarn install
 
 ### Project tree 🌳
 *If you are wondering about folder structure, here is brief intro to every file and what is used for*
+ * [plop-templates](./plop-templates) - *Templates for [Code generator](#code-generator-)*
+    * [CommonComponent](./plop-templates/CommonComponent) - *Common ReactJS component template*
+    * [HOC](./plop-templates/HOC) - *ReactJS Higher-Order Component template*
+    * [redux](./plop-templates/redux) - *Redux store template*
  * [public](./public) - *Assets folder*
    * [index.html](./public/index.html) - *App entry server-side rendered point*
  * [src](./src) - *Everything related to app is here*
@@ -63,8 +67,8 @@ yarn install
      * [api.js](./src/redux/api.js) - *All api points go here*
      * [history.js](./src/redux/history.js) - *History configuration*
      * [reducerInjector.js](./src/redux/reducerInjector.js) - *All api points go here*
-     * [index.js](./src/redux/index.js) - **Import redux here! (Don't forget to!)**
-   * [util](./src/util)
+     * [index.js](./src/redux/index.js) - *Redux exports*
+   * [util](./src/util) - *Utils folder*
      * [Container.js](./src/util/Container.js) - *Append api in redux actions*
      * [Action.js](./src/util/Action.js) - *Util methods related to redux actions*
      * [Redux.js](./src/util/Redux.js) - *Util methods related to redux*
@@ -77,6 +81,26 @@ yarn install
    * [setupProxy.js](./src/setupProxy.js) - *App development proxy*
    * [index.js](./src/index.js) - *App entry point*
    
+---
+
+### Code generator 🏗
+**Smart man once said:** *"If you don't overkill every project with automation, are you even a 21st century developer?"*
+
+We are here in the world where the writing code is considered obsolete, and it's wonderfull, with a little help of [Plop.JS](https://plopjs.com/) I've created automated wizard for common components, redux and HoC with possibility to generate styleguide examples as well
+
+**What can be generated?**
+* Common components - With or without `useState`, `useEffect`, `PropTypes @TODO`
+* Higher-Order Component example
+* Redux `Action`, `Selector`, `Reducer` bundle
+* *You can also choose if you want to export example for styleguide*
+
+**How to use it?**
+* Generator wizard *(Recommended)*
+    * Just open terminal execute`npm run generator` command
+    
+    
+* CLI command
+    * ~@TODO: Work in progress~
    
 ---
 
@@ -109,10 +133,10 @@ yarn install
 ### Dev. Dependencies 📦
 | Name                    | Version   | What for?    |
 |-------------------------|-----------|--------------|
-|http-proxy-middleware    |1.0.2      |TODO          |
-|node-sass                |4.13.1     |TODO          |
-|redux-devtools-extension |2.13.8     |TODO          |
-|react-styleguidist       |11.0.1     |TODO          |
+|http-proxy-middleware    |1.0.2      |If you need to create proxy to ur API this is way to go|
+|node-sass                |4.13.1     |So we can use SASS in our project|
+|redux-devtools-extension |2.13.8     |[Check it out](https://github.com/reduxjs/redux-devtools) - It's nice extension that helps you follow how is your redux behiving|
+|react-styleguidist       |11.0.1     |Styleguide is way to go if you are looking to work with multiple people, so you have one place where you can look at all your components.|
 
 ---
 

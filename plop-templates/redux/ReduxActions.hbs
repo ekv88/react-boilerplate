@@ -1,0 +1,20 @@
+import {withType} from '../../util/util';
+import * as TYPES from './types';
+
+const loadItems = (argument) => (dispatch, getState, container) => {
+    const meta = {};
+    dispatch(withType(TYPES.GET_ITEMS, {payload: meta}));
+    return container.api.getItems(argument).then(response => {
+        dispatch(withType(TYPES.GET_ITEMS_SUCCESS, {payload: response, meta:meta}));
+    }).catch(error => {
+        dispatch(withType(TYPES.GET_ITEMS_FAIL, {error: error}));
+    });
+};
+
+const resetError = () => (dispatch) =>
+    dispatch(withType(TYPES.RESET_ERROR), {error: null})
+
+export default {
+    loadItems,
+    resetError
+};

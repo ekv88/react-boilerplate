@@ -27,6 +27,7 @@
   "devDependencies": {
     "http-proxy-middleware": "^1.0.2",
     "node-sass": "^4.13.1",
+    "plop": "^2.6.0",
     "react-styleguidist": "^11.0.1",
     "redux-devtools-extension": "^2.13.8"
   },
@@ -34,7 +35,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "styleguide": "npx styleguidist server",
-    "styleguide:build": "npx styleguidist server"
+    "styleguide:build": "npx styleguidist server",
+    "generator": "plop"
   },
   "eslintConfig": {
     "extends": "react-app"

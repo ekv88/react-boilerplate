@@ -1,0 +1,32 @@
+{{#if createUseEffect}}
+import React, { {{#if createUseEffect}}useEffect{{/if}}{{#if createUseState}}, useState{{/if}} }  from "react";
+{{else if createUseState}}
+import React, { {{#if createUseState}}useState{{/if}}{{#if createUseEffect}}, useEffect{{/if}} }  from "react";
+{{else}}
+import React from "react";
+{{/if}}
+{{#if createPropTypes}}
+import PropTypes from 'prop-types';
+{{/if}}
+
+const {{name}} = ({ children, ...otherProps }) => {
+    {{#if createUseState}}
+    const [useValue, setValue] = useState(null);
+    {{/if}}
+    {{#if createUseEffect}}
+    useEffect(() => {
+        // Your code here
+    },[]);
+    {{/if}}
+    return (
+        <span {...otherProps}>{children}</span>
+    );
+};
+
+{{#if createPropTypes}}
+{{name}}.propTypes = {
+    // Component children
+    children: PropTypes.any,
+};
+{{/if}}
+export default {{name}};
