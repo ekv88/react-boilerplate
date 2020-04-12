@@ -1,6 +1,4 @@
-export const createFromCall = (call, sufix) => {
-    return call + '_' + sufix;
-};
+export const createFromCall = (call, suffix) => call + '_' + suffix;
 
 const PREFIX = 'doggos/';
 

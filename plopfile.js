@@ -150,6 +150,14 @@ module.exports = function (plop) {
                     path: 'src/redux/{{name}}/selectors.js',
                     templateFile: 'plop-templates/redux/ReduxSelectors.hbs'
                 });
+                // Types file
+                actions.push({
+                    type: 'add',
+                    skipIfExists: true,
+                    abortOnFail: true,
+                    path: 'src/redux/{{name}}/types.js',
+                    templateFile: 'plop-templates/redux/ReduxTypes.hbs'
+                });
                 // Append import in index of redux
                 actions.push({
                     type: 'append',

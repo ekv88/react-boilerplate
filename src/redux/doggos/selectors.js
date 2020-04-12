@@ -5,7 +5,7 @@ const extractDoggosImages = (state) => state.doggos.images ? state.doggos.images
 const extractLoadings = (state) => state.doggos.loading ? state.doggos.loading : null;
 const extractErrors = (state) => state.doggos.errors ? state.doggos.errors : null;
 
-const getMoviesSearchResults = createSelector(
+const getDoggos = createSelector(
     extractDoggosImages,
     (images) => images ? images : []
 );
@@ -21,7 +21,7 @@ const getDoggosLoadingErrors = createSelector(
 );
 
 export default {
-    getMoviesSearchResults,
+    getDoggos,
     getDoggosErrors,
     getDoggosLoadingErrors,
 }

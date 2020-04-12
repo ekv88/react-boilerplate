@@ -33,7 +33,7 @@ const HomePage = ({loadDoggos, doggos, errors, resetError, loading}) => {
 };
 
 const mapStateToProps = (state, props) => ({
-    doggos: doggosSelectors.getMoviesSearchResults(state),
+    doggos: doggosSelectors.getDoggos(state),
     loading: doggosSelectors.getDoggosLoadingErrors(state),
     errors: doggosSelectors.getDoggosErrors(state),
 });

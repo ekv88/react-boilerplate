@@ -1,0 +1,27 @@
+import {createSelector} from "reselect";
+import {CALLS} from "./types";
+
+const extractItems = (state) => state.{{name}}.items ? state.{{name}}.items : null;
+const extractLoadings = (state) => state.{{name}}.loading ? state.{{name}}.loading : null;
+const extractErrors = (state) => state.{{name}}.errors ? state.{{name}}.errors : null;
+
+const getItems = createSelector(
+    extractItems,
+    (items) => items ? items : []
+);
+
+const getItemsErrors = createSelector(
+    extractErrors,
+    (errors) => !errors ? null : errors[CALLS.GET_ITEMS]
+);
+
+const getItemsLoadingErrors = createSelector(
+    extractLoadings,
+    (loadings) => !loadings ? null : loadings[CALLS.GET_ITEMS]
+);
+
+export default {
+    getItems,
+    getItemsErrors,
+    getItemsLoadingErrors,
+}
