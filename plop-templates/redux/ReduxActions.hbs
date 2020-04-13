@@ -12,7 +12,7 @@ const loadItems = (argument) => (dispatch, getState, container) => {
 };
 
 const resetError = () => (dispatch) =>
-    dispatch(withType(TYPES.RESET_ERROR), {error: null})
+    dispatch(withType(TYPES.RESET_ERROR), {error: null});
 
 export default {
     loadItems,

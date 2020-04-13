@@ -4,6 +4,9 @@ module.exports = function (plop) {
         { name: "Higher-Order Component", value: "HOC" },
         { name: "Redux", value: "REDUX" },
     ];
+
+    const printMessage = msg => answers => new Promise((resolve) => resolve(msg));
+
     // controller generator
     plop.setGenerator('controller', {
         description: 'application controller logic',
@@ -19,7 +22,7 @@ module.exports = function (plop) {
                 if((/^\S+$/).test(value)) return true;
                 return 'Name cannot be empty or contain space';
             },
-            message: ({cType}) => componentTypes.find(c => c.type === cType).name + ' name:'
+            message: ({type}) => componentTypes.find(c => c.value === type).name + ' name:'
         },{
             // Only if it's common component
             when: (response) => response.type === "CC",
@@ -33,6 +36,12 @@ module.exports = function (plop) {
             type: "confirm",
             name: "createIndex",
             message: "Do you want to create index.js file? (Recommended)",
+        },{
+            // Only if is common component
+            when: (response) => response.createIndex === true && response.type === "CC" || response.type === "HOC",
+            type: "confirm",
+            name: "injectIndexExport",
+            message: "Do you want to add this component to ./src/components/index.js file? (Recommended)",
         },{
             // Only if it's common component
             when: (response) => response.type === "CC",
@@ -56,9 +65,13 @@ module.exports = function (plop) {
             let actions = [];
 
             // createUseEffect, createUseState
-            // console.log(data);
+            console.log(data, componentTypes);
 
-            let { type, name, createMd, createIndex } = data;
+            let { type, name, createMd, createIndex, injectIndexExport } = data;
+
+            actions.push(printMessage('\nStarted generating: ' + componentTypes.find(c => c.value === type).name));
+            actions.push(printMessage('\nName: ' + name));
+            actions.push(printMessage('\n-------------------------------------\n'));
 
             // If type is custom component
             if(type === 'CC') {
@@ -80,6 +93,14 @@ module.exports = function (plop) {
                         // One line template for default export from component file
                         template: "export {default} from './{{name}}';"
                     });
+                    if(injectIndexExport) {
+                        actions.push({
+                            type: 'append',
+                            path: 'src/components/index.js',
+                            pattern: /(\/\/ GENERATOR EXPORT)/gi,
+                            template: "export {default as " + name + "} from './" + name + "';"
+                        });
+                    }
                 }
                 if(createMd) {
                     actions.push({
@@ -113,6 +134,14 @@ module.exports = function (plop) {
                         // One line template for default export from component file
                         template: "export {default} from './{{name}}';"
                     });
+                    if(injectIndexExport) {
+                        actions.push({
+                            type: 'append',
+                            path: 'src/components/index.js',
+                            pattern: /(\/\/ GENERATOR EXPORT)/gi,
+                            template: "export {default as " + name + "} from './HOC/" + name + "';"
+                        });
+                    }
                 }
             }
 
@@ -158,6 +187,10 @@ module.exports = function (plop) {
                     path: 'src/redux/{{name}}/types.js',
                     templateFile: 'plop-templates/redux/ReduxTypes.hbs'
                 });
+
+                // Print message about injection
+                actions.push(printMessage('\n\nInjecting import in ./src/redux/index.js'));
+
                 // Append import in index of redux
                 actions.push({
                     type: 'append',
@@ -173,6 +206,8 @@ module.exports = function (plop) {
                     template: '    {{name}},'
                 });
             }
+
+            actions.push(printMessage('\nCode generation completed!'));
 
             return actions;
         }
