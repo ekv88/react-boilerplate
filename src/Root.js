@@ -16,8 +16,8 @@ const Root = () =>
         <Switch>
             <Redirect exact from='/' to='/home'/>
 
-            <Route exact path='/home' render={props => <Layout main={<HomePage/>} menu={<SideMenu active="home"/>} {...props}/>}/>
-            <Route exact path='/about' render={props => <Layout main={<AboutPage/>} menu={<SideMenu active="about"/>} {...props}/>}/>
+            <Route exact path='/home' render={props => <Layout main={<HomePage/>} pageName="Home" menu={<SideMenu active="home"/>} {...props}/>}/>
+            <Route exact path='/about' render={props => <Layout main={<AboutPage/>} pageName="About" menu={<SideMenu active="about"/>} {...props}/>}/>
 
             <Route render={props => <Layout main={<ErrorPage code={404}/>} {...props}/>}/>
         </Switch>

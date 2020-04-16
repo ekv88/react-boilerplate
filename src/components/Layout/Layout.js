@@ -13,63 +13,34 @@ const useStyles = makeStyles(theme => ({
         paddingRight: 24, // keep right padding when drawer closed
     },
     appBar: {
-        zIndex: theme.zIndex.drawer + 1,
-        transition: theme.transitions.create(['width', 'margin'], {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
+        boxShadow: '0px 0px 0px transparent'
     },
     drawerPaper: {
         position: 'relative',
         whiteSpace: 'nowrap',
-        width: 240,
         height: '100vh',
-        transition: theme.transitions.create('width', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    },
-    container: {
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(4),
-    },
-    contentContainer: {
-        padding: theme.spacing(2)
-    },
-    paper: {
-        padding: theme.spacing(2),
-        display: 'flex',
-        overflow: 'auto',
-        flexDirection: 'column',
-    },
-    fixedHeight: {
-        height: 240,
     },
 }));
 
-const Layout = ({menu, main, id}) => {
+const Layout = ({menu, main, id, pageName}) => {
     const classes = useStyles();
 
     return (
-        <Grid container direction="row" spacing={0} className={classes.container}>
-            <Grid item xl={2} lg={2} md={4} sm={12} xs={12}>
-                <div className={classes.root}>
-                    <AppBar position="absolute" className={classes.appBar}>
-                        <Toolbar className={classes.toolbar}>
-                            <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-                                Dashboard
-                            </Typography>
-                        </Toolbar>
-                    </AppBar>
-                    <Drawer variant="permanent" classes={{ paper: classes.drawerPaper}} open>{menu}</Drawer>
-                </div>
-            </Grid>
-            <Grid item xl={10} lg={10} md={8} sm={12} xs={12} className={classes.contentContainer}>
-                <div className="content-holder" id={id}>
+        <React.Fragment>
+            <AppBar position="static" className={classes.appBar}>
+                <Toolbar className={classes.toolbar}>
+                    <Typography component="h1" variant="h6" color="inherit" noWrap>{pageName}</Typography>
+                </Toolbar>
+            </AppBar>
+            <Grid container id={id}>
+                <Grid item xl={2} lg={2} md={3} sm={12} xs={12}>
+                    <Drawer variant="permanent" classes={{ paper: classes.drawerPaper}}>{menu}</Drawer>
+                </Grid>
+                <Grid item xl={10} lg={10} md={9} sm={12} xs={12}>
                     <Suspense fallback={null}>{main}</Suspense>
-                </div>
+                </Grid>
             </Grid>
-        </Grid>
+        </React.Fragment>
     );
 };
 

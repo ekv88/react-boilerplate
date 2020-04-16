@@ -2,14 +2,9 @@ import React, { useEffect } from 'react';
 import {connect} from 'react-redux';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
 
 // Import redux selector and actions
 import {doggosActions, doggosSelectors} from "../../redux/doggos";
-
-// Import some custom components from components folder
-import { CommonComponent } from "../../components";
 
 const HomePage = ({loadDoggos, doggos, errors, resetError, loading}) => {
 
@@ -20,7 +15,7 @@ const HomePage = ({loadDoggos, doggos, errors, resetError, loading}) => {
     }, [doggos, loadDoggos]);
 
     // Button handler for loading more images
-    const handleLoadMore = (quantity) => loadDoggos(quantity);
+    // const handleLoadMore = (quantity) => loadDoggos(quantity);
 
     return (
         <div>
