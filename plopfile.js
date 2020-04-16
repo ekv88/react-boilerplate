@@ -1,4 +1,4 @@
-module.exports = function (plop) {
+module.exports = (plop) => {
     let componentTypes = [
         { name: "Common component", value: "CC" },
         { name: "Higher-Order Component", value: "HOC" },
